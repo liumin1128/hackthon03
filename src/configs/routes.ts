@@ -10,8 +10,8 @@ export default [
     routes: [
       {
         path: '/',
-        wrappers: ['@/layouts/retro'],
-        component: '@/pages/retro',
+        wrappers: ['@/layouts/dynamic'],
+        component: '@/pages/home',
         title: 'Home',
         exact: true,
       },

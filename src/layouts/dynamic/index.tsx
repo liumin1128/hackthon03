@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import UserInfoCard from '@/container/UserInfo/InfoCard';
 import MaterialUISwitch from '@/components/MaterialUISwitch';
 
 interface Props {
@@ -24,7 +23,7 @@ export default function Home({ children }: Props) {
       <AppBar color="default" position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Dynamic
+            Hackthon03
           </Typography>
           <MaterialUISwitch />
         </Toolbar>
@@ -37,9 +36,7 @@ export default function Home({ children }: Props) {
               {children}
             </Grid>
             <Grid item xs={12} md={4}>
-              <Card>
-                <UserInfoCard />
-              </Card>
+              <Card>test</Card>
             </Grid>
           </Grid>
         </Container>
