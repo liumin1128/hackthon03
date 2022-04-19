@@ -1,0 +1,86 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "PORT=3201 umi dev",
+    "build": "cross-env UMI_ENV=production umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.{js,jsx,tsx,ts}\" --quiet --cache --fix",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --quiet --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.32.3",
+    "@apollo/client": "^3.5.7",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@hookform/resolvers": "^2.8.5",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.8",
+    "@sentry/react": "^6.16.1",
+    "@sentry/tracing": "^6.16.1",
+    "axios": "^0.25.0",
+    "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.10.7",
+    "graphql": "^16.2.0",
+    "graphql-tag": "^2.12.6",
+    "lodash": "^4.17.21",
+    "notistack": "^2.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.24.0",
+    "rxjs": "^7.5.2",
+    "store": "^2.0.12",
+    "subscriptions-transport-ws": "^0.11.0",
+    "umi": "^3.5.20",
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.3.1",
+    "@graphql-codegen/fragment-matcher": "^3.2.1",
+    "@graphql-codegen/introspection": "^2.1.1",
+    "@graphql-codegen/typescript": "^2.4.2",
+    "@graphql-codegen/typescript-operations": "^2.2.2",
+    "@graphql-codegen/typescript-react-apollo": "^3.2.4",
+    "@types/lodash": "^4.14.178",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/store": "^2.0.2",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "@umijs/preset-react": "^2.1.1",
+    "@umijs/test": "^3.5.20",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "19.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "lint-staged": "^12.1.7",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "yorkie": "^2.0.0"
+  }
+}

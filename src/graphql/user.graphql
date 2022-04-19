@@ -1,0 +1,37 @@
+fragment userFields on User {
+  __typename
+  _id
+  nickname
+  username
+  avatarUrl
+}
+
+query FindUsers {
+  findUsers {
+    _id
+    nickname
+    username
+    avatarUrl
+  }
+}
+
+query FindUserInfo {
+  findUserInfo {
+    _id
+    nickname
+    username
+    avatarUrl
+  }
+}
+
+query Login($input: LoginUserInput) {
+  login(input: $input) {
+    user {
+      _id
+      nickname
+      username
+      avatarUrl
+    }
+    token
+  }
+}
