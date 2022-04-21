@@ -10,7 +10,7 @@ export default [
     routes: [
       {
         path: '/',
-        wrappers: ['@/layouts/dynamic'],
+        wrappers: ['@/layouts/hackthon03'],
         component: '@/pages/home',
         title: 'Home',
         exact: true,
