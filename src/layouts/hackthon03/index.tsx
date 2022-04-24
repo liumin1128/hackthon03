@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
+// import Card from '@mui/material/Card';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
@@ -31,14 +31,7 @@ export default function Home({ children }: Props) {
 
       <Stack>
         <Container fixed sx={{ p: isUpMd ? undefined : 0 }}>
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={8}>
-              {children}
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Card>test</Card>
-            </Grid>
-          </Grid>
+            {children}
         </Container>
       </Stack>
       <Stack />

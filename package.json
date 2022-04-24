@@ -10,18 +10,6 @@
     "test:coverage": "umi-test --coverage",
     "codegen": "graphql-codegen --config codegen.yml"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write",
-      "eslint --quiet --cache --fix"
-    ]
-  },
   "dependencies": {
     "@ant-design/pro-layout": "^6.32.3",
     "@apollo/client": "^3.5.7",
@@ -36,13 +24,12 @@
     "clsx": "^1.1.1",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.7",
-    "graphql": "^16.2.0",
-    "graphql-tag": "^2.12.6",
     "lodash": "^4.17.21",
     "notistack": "^2.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.24.0",
+    "react-image-crop": "^10.0.0",
     "rxjs": "^7.5.2",
     "store": "^2.0.12",
     "subscriptions-transport-ws": "^0.11.0",
